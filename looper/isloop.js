@@ -2,7 +2,20 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+  let curr = linkedlist.head
+//console.log(curr)
+  let seen=[];
+  //console.log('seen',seen,curr.value)
+  while(curr){
+    //console.log('Am I in the loop')
+    if(seen.includes(curr.value)){
+     return true
+    }
+    seen.push(curr.value);
+    curr=curr.next;
 
+  }
+return false;
 };
 
 
